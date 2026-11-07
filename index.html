@@ -28,6 +28,8 @@ img{max-width:100%}
  #inicio{min-height:600px!important}
  #inicio > div{padding:72px 20px!important}
  header nav a:not(:last-child){display:none}
+ header > div{flex-wrap:nowrap!important}
+ header nav a:last-child{white-space:nowrap;padding:10px 16px!important;font-size:15px!important}
 }
 @media (prefers-reduced-motion:reduce){video{display:none}}
 </style>
@@ -38,11 +40,13 @@ img{max-width:100%}
 <!-- NAV -->
 <header style="background: #FFFFFF; border-bottom: 1px solid #ECE3CF">
 <div style="max-width: 1200px; margin: 0 auto; padding: 10px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
-<a href="#inicio" style="display: flex; align-items: center; text-decoration: none">
-<img src="assets/logo-jara.png" alt="Jara Eventos" style="height: 84px; width: 84px; display: block">
+<a href="#inicio" aria-label="Jara Eventos, inicio" style="display: flex; flex-direction: column; align-items: center; gap: 4px; text-decoration: none; padding: 6px 0">
+<img src="assets/jara-wordmark.png" alt="" width="102" height="46" style="height: 46px; width: auto; display: block">
+<span style="display: flex; align-items: center; gap: 8px; font-family: 'Jost', system-ui, sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 0.42em; color: #85703F; line-height: 1"><span aria-hidden="true" style="width: 14px; height: 1px; background: #C9B48A; display: block"></span>EVENTOS<span aria-hidden="true" style="width: 14px; height: 1px; background: #C9B48A; display: block; margin-left: -0.42em"></span></span>
 </a>
 <nav aria-label="Principal" style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 28px; font-size: 16px">
 <a href="#incluye" style="text-decoration: none">Qué incluye</a>
+<a href="#menu" style="text-decoration: none">Menú</a>
 <a href="#galeria" style="text-decoration: none">Galería</a>
 <a href="#apartar" style="text-decoration: none">Cómo apartar</a>
 <a href="https://wa.me/525517962213?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20cotizar%20una%20cena%20navide%C3%B1a" style="text-decoration: none; background: #3F5A17; color: #FFFFFF; padding: 12px 22px; border-radius: 999px; font-weight: 500; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">Cotiza por WhatsApp</a>
@@ -64,7 +68,7 @@ Temporada navideña 2026</p>
 <p style="margin: 0; max-width: 560px; font-size: 19px; color: #F3EFE4">Llevamos el banquete, la decoración y el ambiente a tu casa, oficina o salón. Tú invitas; nosotros nos encargamos de todo lo demás.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 8px">
 <a href="https://wa.me/525517962213?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20cotizar%20una%20cena%20navide%C3%B1a" style="text-decoration: none; background: #FFFDF8; color: #34491A; padding: 16px 30px; border-radius: 999px; font-weight: 500; font-size: 17px">Aparta tu fecha por WhatsApp →</a>
-<a href="#incluye" style="text-decoration: none; border: 1.5px solid #FFFFFF; color: #FFFFFF; padding: 15px 28px; border-radius: 999px; font-weight: 500; font-size: 17px">Ver qué incluye</a>
+<a href="#menu" style="text-decoration: none; border: 1.5px solid #FFFFFF; color: #FFFFFF; padding: 15px 28px; border-radius: 999px; font-weight: 500; font-size: 17px">Ver el menú</a>
 </div>
 <p style="margin: 4px 0 0; font-size: 15px; color: #E7E2D3">Atendemos en Lomas Verdes y alrededores</p>
 </div>
@@ -85,7 +89,7 @@ Temporada navideña 2026</p>
 <svg width="36" height="36" viewBox="0 0 44 44" fill="none" stroke="#3F5A17" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 32h32"></path><path d="M9 32a13 13 0 0 1 26 0"></path><path d="M22 19v-3"></path><circle cx="22" cy="14" r="2"></circle><path d="M4 36h36"></path></svg>
 </span>
 <h3 style="margin: 0; font-family: 'DM Serif Display', serif; font-size: 26px; font-weight: 400; color: #3F5A17">Banquete y menú navideño</h3>
-<p style="margin: 0; color: #474D3E">Menú de temporada preparado y servido para tus invitados. [PLATILLOS DEL MENÚ NAVIDEÑO]</p>
+<p style="margin: 0; color: #474D3E">Pavo, pollo o lomo de cerdo con dos guarniciones a elegir, pan recién horneado y postre.</p>
 </div>
 
 <div style="background: #FFFFFF; border: 1px solid #ECE3CF; border-radius: 20px; padding: 32px 28px; display: flex; flex-direction: column; gap: 14px">
@@ -117,21 +121,61 @@ Temporada navideña 2026</p>
 </section>
 
 <!-- PAQUETE -->
-<section style="background: #34491A; color: #F7F2E6">
-<div style="max-width: 1200px; margin: 0 auto; padding: 88px 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 48px; align-items: center">
-<div style="display: flex; flex-direction: column; gap: 16px">
-<p style="margin: 0; font-size: 14px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: #F2B266">Paquete navideño</p>
-<h2 class="h2" style="margin: 0; font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 46px; line-height: 1.1">Para familias, empresas y grupos de amigos</h2>
-<p style="margin: 0; font-size: 18px; color: #E7E2D3">Cada cena se cotiza a la medida: dinos cuántos son, dónde y cuándo, y te enviamos una propuesta.</p>
+<section id="menu" style="background: #34491A; color: #F7F2E6">
+<div style="max-width: 1200px; margin: 0 auto; padding: 88px 24px; display: flex; flex-direction: column; gap: 40px">
+<div style="text-align: center; display: flex; flex-direction: column; gap: 12px; align-items: center">
+<p style="margin: 0; font-size: 14px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: #F2B266">Menú navideño 2026</p>
+<h2 class="h2" style="margin: 0; font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 48px; line-height: 1.1">Arma tu cena a tu gusto</h2>
+<p style="margin: 0; max-width: 620px; font-size: 18px; color: #E7E2D3">Elige 1 proteína y 2 guarniciones. Todas las opciones incluyen pan recién horneado y postre.</p>
 </div>
-<div style="background: #FFFDF8; color: #2E3326; border-radius: 24px; padding: 36px; display: flex; flex-direction: column; gap: 18px">
-<ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 14px; font-size: 18px">
-<li style="display: flex; gap: 12px; align-items: baseline"><span aria-hidden="true" style="color: #B55F0E">✓</span>Desde [NÚMERO] personas</li>
-<li style="display: flex; gap: 12px; align-items: baseline"><span aria-hidden="true" style="color: #B55F0E">✓</span>Menú navideño: [PLATILLOS PRINCIPALES]</li>
-<li style="display: flex; gap: 12px; align-items: baseline"><span aria-hidden="true" style="color: #B55F0E">✓</span>Montaje, servicio y decoración incluidos [CONFIRMAR]</li>
+
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h3 style="margin: 0; font-size: 14px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: #E4D3AE">1 · Elige tu proteína</h3>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px">
+<div style="background: #FFFDF8; color: #2E3326; border-radius: 22px; padding: 30px 28px; display: flex; flex-direction: column; gap: 12px">
+<h4 style="margin: 0; font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 30px; color: #3F5A17">Pavo</h4>
+<p style="margin: 0; color: #474D3E; flex-grow: 1">Pechuga de pavo a la mantequilla y limón, o al vino blanco.</p>
+<p style="margin: 0; padding-top: 12px; border-top: 1px solid #ECE3CF; font-size: 15px; color: #5B6152"><span style="font-family: 'DM Serif Display', serif; font-size: 30px; color: #B55F0E">$560</span> por persona</p>
+</div>
+<div style="background: #FFFDF8; color: #2E3326; border-radius: 22px; padding: 30px 28px; display: flex; flex-direction: column; gap: 12px">
+<h4 style="margin: 0; font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 30px; color: #3F5A17">Pollo</h4>
+<p style="margin: 0; color: #474D3E; flex-grow: 1">Pechuga de pollo en salsa de mango rellena de queso de cabra, con gravy de champiñones.</p>
+<p style="margin: 0; padding-top: 12px; border-top: 1px solid #ECE3CF; font-size: 15px; color: #5B6152"><span style="font-family: 'DM Serif Display', serif; font-size: 30px; color: #B55F0E">$450</span> por persona</p>
+</div>
+<div style="background: #FFFDF8; color: #2E3326; border-radius: 22px; padding: 30px 28px; display: flex; flex-direction: column; gap: 12px">
+<h4 style="margin: 0; font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 30px; color: #3F5A17">Lomo de cerdo</h4>
+<p style="margin: 0; color: #474D3E; flex-grow: 1">En salsa de ciruela pasa, o con queso roquefort y pera a las finas hierbas en salsa a la naranja.</p>
+<p style="margin: 0; padding-top: 12px; border-top: 1px solid #ECE3CF; font-size: 15px; color: #5B6152"><span style="font-family: 'DM Serif Display', serif; font-size: 30px; color: #B55F0E">$450</span> por persona</p>
+</div>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h3 style="margin: 0; font-size: 14px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: #E4D3AE">2 · Elige 2 guarniciones</h3>
+<ul style="margin: 0; padding: 28px 32px; list-style: none; background: rgba(255, 253, 248, 0.08); border: 1px solid rgba(228, 211, 174, 0.35); border-radius: 22px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px 32px; font-size: 17px">
+<li style="display: flex; gap: 10px; align-items: baseline"><span aria-hidden="true" style="color: #F2B266">✦</span>Pasta a los 4 quesos o al tomate</li>
+<li style="display: flex; gap: 10px; align-items: baseline"><span aria-hidden="true" style="color: #F2B266">✦</span>Puré a la parmesana</li>
+<li style="display: flex; gap: 10px; align-items: baseline"><span aria-hidden="true" style="color: #F2B266">✦</span>Media papa al horno</li>
+<li style="display: flex; gap: 10px; align-items: baseline"><span aria-hidden="true" style="color: #F2B266">✦</span>Atado de espárragos con tocino</li>
+<li style="display: flex; gap: 10px; align-items: baseline"><span aria-hidden="true" style="color: #F2B266">✦</span>Verduras al vapor a la mantequilla</li>
+<li style="display: flex; gap: 10px; align-items: baseline"><span aria-hidden="true" style="color: #F2B266">✦</span>Ensalada de manzana</li>
+<li style="display: flex; gap: 10px; align-items: baseline"><span aria-hidden="true" style="color: #F2B266">✦</span>Ensalada de zanahoria y piña</li>
+<li style="display: flex; gap: 10px; align-items: baseline"><span aria-hidden="true" style="color: #F2B266">✦</span>Ensalada rusa</li>
 </ul>
-<p style="margin: 0; font-family: 'DM Serif Display', serif; font-size: 30px; color: #3F5A17">Desde [PRECIO] por persona</p>
-<a href="https://wa.me/525517962213?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20cotizar%20una%20cena%20navide%C3%B1a" style="text-decoration: none; text-align: center; background: #3F5A17; color: #FFFFFF; padding: 16px 28px; border-radius: 999px; font-weight: 500">Pide tu cotización →</a>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px 32px; padding: 26px 32px; border-radius: 22px; background: #F2B266; color: #26340F">
+<div style="display: flex; flex-direction: column; gap: 2px">
+<p style="margin: 0; font-family: 'DM Serif Display', serif; font-size: 28px; line-height: 1.15">Incluye pan recién horneado y postre</p>
+<p style="margin: 0; font-size: 16px">Pregunta también por nuestras opciones de paella, taquizas y parrilladas.</p>
+</div>
+<a href="https://wa.me/525517962213?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20cotizar%20una%20cena%20navide%C3%B1a" style="text-decoration: none; background: #26340F; color: #FFFFFF; padding: 16px 28px; border-radius: 999px; font-weight: 500; white-space: nowrap">Cotiza por WhatsApp →</a>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 8px 32px; font-size: 14px; color: #D9D3C2">
+<p style="margin: 0">Precios en pesos mexicanos, por persona.</p>
+<p style="margin: 0">Pago en depósito o efectivo sin IVA; si requieres factura, se agrega el IVA.</p>
+<p style="margin: 0">El anticipo no es reembolsable en caso de cancelar el evento.</p>
 </div>
 </div>
 </section>
@@ -144,6 +188,9 @@ Temporada navideña 2026</p>
 <h2 class="h2" style="margin: 0; font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 48px; line-height: 1.1; color: #3F5A17">Así se ven nuestras mesas</h2>
 </div>
 <div class="gal">
+<img src="assets/jara-mesa-7.jpg" alt="Mesa negra de mármol con vajilla negra, cubiertos dorados, velas y centro de follaje" loading="lazy" width="960" height="1200">
+<img src="assets/jara-mesa-8.jpg" alt="Mesa de madera en patio con sillas tapizadas, velas, flores blancas y copas verdes" loading="lazy" width="960" height="1200">
+<img src="assets/jara-mesa-9.jpg" alt="Detalle de mesa con velas, menú impreso, copas verdes y servilletas con aro de madera" loading="lazy" width="960" height="1200">
 <img src="assets/jara-mesa-1.jpg" alt="Mesa rústica larga en jardín con camino azul, cubiertos dorados y centro de flores secas" loading="lazy" width="960" height="1200">
 <img src="assets/jara-mesa-2.jpg" alt="Lugar montado con plato blanco, cubiertos dorados y camino de mesa azul" loading="lazy" width="960" height="1200">
 <img src="assets/jara-mesa-3.jpg" alt="Mesa con mantel lila, servilletas en copa y centro de hortensias" loading="lazy" width="960" height="1200">
